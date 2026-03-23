@@ -1,0 +1,223 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-image: url('bg.jpg');
+  background-repeat: repeat;
+  background-color: rgba(255,220,230,0.5);
+  background-blend-mode: overlay;
+}
+
+header {
+  position: relative;
+  padding: 20px;
+  background-color: #fff0f5;
+  background-image: url('pea.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+}
+
+footer {
+  background-color: #ffccdd;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #5a005a;
+}
+
+div {
+  position: relative; 
+  background-color: rgba(255, 240, 245, 0.6); 
+  padding: 20px;
+}
+
+h1,h2 {
+  font-family: Georgia; 
+  font-size: 45px; 
+  color: #741B7C; 
+  text-align: center;
+  font-weight: bold;
+}
+
+.tagline {
+  color: #674069; 
+  font-size: 30px; 
+  font-style: italic; 
+  font-family: lucida handwriting
+}
+
+nav {
+  background-image: url('border.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255,220,230,0.9);
+  background-blend-mode: overlay;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255,190,200,0.6);
+  overflow: hidden;
+}
+
+nav li {
+  margin: 0 15px;
+  display: inline;
+}
+
+nav a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #4b0082;
+  text-decoration: underline;
+}
+
+.intro {
+  padding: 30px;
+  background-color: #ffe6f0;
+}
+
+.intro h2 {
+  color: #ff1493;
+  font-family: 'Times New Roman', serif;
+  font-size: 36px;
+}
+
+.intro p {
+  font-size: 20px;
+}
+
+.intro ul {
+  line-height: 1.8;
+}
+
+.art {
+  display: none;
+}
+
+.auth-links {
+  text-align: center;
+  margin: 20px;
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8a2be2;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: #4b0082;
+}
+
+.form-section {
+  background-color: #fff0f5;
+  padding: 30px;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #d63384;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #ffe6f0;
+  display: inline-block;
+  text-align: left;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid #e6e6fa;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type="submit"] {
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #e754a0;
+}
+
+
+
+
+.intro {
+  margin: auto;         /* centers automatically */
+  max-width: 90%;       /* fits within screen */
+}
+.product-card {
+  width: 100%;          /* full width on small screens */
+  max-width: 250px;     /* but not too big on large screens */
+}
+
+
+/* For tablets */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .gallery-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro {
+    margin: 20px;
+    font-size: 18px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+  nav li {
+    margin: 5px 0;
+  }
+  .product-card {
+    width: 90%;  /* full width but with padding */
+  }
+  .tagline {
+    font-size: 18px;
+  }
+}
