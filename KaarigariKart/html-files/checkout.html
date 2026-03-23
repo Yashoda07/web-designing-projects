@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout - KarigariKart</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f5f5f5; margin:0; padding:0;">
+
+<h1 style="text-align:center; padding:20px; background:#ff9999; color:white;">Checkout</h1>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center; padding:20px;">
+
+<!-- Shipping Details -->
+<div style="flex:1; min-width:300px; max-width:500px; background:white; padding:20px; margin:10px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+<h2 style="color:#ff6666;">Shipping Details</h2>
+<form id="checkoutForm">
+<label>Full Name:</label><br>
+<input type="text" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your fullname"><br>
+
+<label>Email:</label><br>
+<input type="email" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your Email"><br>
+
+<label>Phone:</label><br>
+<input type="tel" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your Phone"><br>
+
+<label>Address:</label><br>
+<input type="text" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your Address"><br>
+
+<label>City:</label><br>
+<input type="text" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your City"><br>
+
+<label>State:</label><br>
+<input type="text" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your State"><br>
+
+<label>PIN Code:</label><br>
+<input type="text" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your PIN Code"><br>
+
+<label>Country:</label><br>
+<input type="text" style="width:100%; padding:8px; margin-bottom:10px;" required placeholder = "enter your country"><br>
+</div>
+
+<!-- Payment Details -->
+<div style="flex:1; min-width:300px; max-width:500px; background:white; padding:20px; margin:10px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+<h2 style="color:#ff6666;">Payment Method</h2>
+
+<label><input type="radio" name="payment" value="card" checked> Credit / Debit Card</label><br><br>
+<label>Card Number:</label><br>
+<input type="text" style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+<label>Expiry Date:</label><br>
+<input type="text" placeholder="MM/YY" style="width:48%; padding:8px; margin-bottom:10px;"> 
+<input type="text" placeholder="CVV" style="width:48%; padding:8px; margin-bottom:10px; float:right;"><br style="clear:both;">
+
+<br><label><input type="radio" name="payment" value="cod"> Cash on Delivery</label><br><br>
+<label><input type="radio" name="payment" value="upi"> UPI / Net Banking</label><br>
+</div>
+
+<!-- Order Summary -->
+<div style="flex:1; min-width:250px; max-width:350px; background:white; padding:20px; margin:10px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+<h2 style="color:#ff6666;">Order Summary</h2>
+<table style="width:100%; border-collapse:collapse;">
+<tr>
+<td>Product 1</td>
+<td style="text-align:right;">
+<input type="number" id="p1" value="0" style="width:80px; text-align:right;">
+</td>
+</tr>
+<tr>
+<td>Product 2</td>
+<td style="text-align:right;">
+<input type="number" id="p2" value="0" style="width:80px; text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="border-top:1px solid #ddd;">Subtotal</td>
+<td id="subtotal" style="border-top:1px solid #ddd; text-align:right;">₹0</td>
+</tr>
+<tr>
+<td>Tax (10%)</td>
+<td id="tax" style="text-align:right;">₹0</td>
+</tr>
+<tr>
+<td style="border-top:2px solid #ff6666; font-weight:bold;">Total</td>
+<td id="total" style="border-top:2px solid #ff6666; text-align:right; font-weight:bold;">₹0</td>
+</tr>
+</table>
+<br>
+<button type="submit" style="width:100%; padding:10px; background:#ff6666; color:white; border:none; border-radius:5px; font-size:16px; cursor:pointer;">Place Order</button>
+</div>
+
+</form>
+</div>
+
+<script>
+function calculateBill(){
+  let p1 = parseFloat(document.getElementById("p1").value) || 0;
+  let p2 = parseFloat(document.getElementById("p2").value) || 0;
+
+  let subtotal = p1 + p2;
+  let tax = subtotal * 0.10;
+  let total = subtotal + tax;
+
+  document.getElementById("subtotal").innerText = "₹" + subtotal;
+  document.getElementById("tax").innerText = "₹" + tax.toFixed(2);
+  document.getElementById("total").innerText = "₹" + total.toFixed(2);
+}
+
+document.getElementById("p1").addEventListener("input", calculateBill);
+document.getElementById("p2").addEventListener("input", calculateBill);
+
+document.getElementById("checkoutForm").addEventListener("submit", function(event){
+  event.preventDefault();
+  
+  let paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+  if(paymentMethod === "upi"){
+    window.location.href = "payment.html"; 
+  } else {
+    alert("Your order has been placed successfully!");
+    window.location.href = "index.html"; 
+  }
+});
+</script>
+
+</body>
+</html>

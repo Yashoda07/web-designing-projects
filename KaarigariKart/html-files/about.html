@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Us - KarigariKart</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.fade {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade.visible {
+  opacity: 1;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header>
+<div>
+<h1>KarigariKart</h1>
+<p class="tagline">Empowering Indian Artistry</p>
+</div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="artisans.html">Meet Our Artisans!</a></li>
+<li><a href="support.html">Support</a></li>
+</ul>
+</nav>
+
+
+<div style="padding: 30px;">
+<h2 class = "fade" style="font-family:'lucida handwriting'; font-size:25px; color:#d63384;">🧵 Our Story</h2>
+<p style="font-size:18px; line-height:1.8; color:#444; text-align: justify; margin-left:650px; margin-right:650px">
+KarigariKart is a heartfelt initiative to bring India's timeless handmade crafts to the forefront of the digital world. This platform showcases the creativity of local artisans,from traditional paintings and intricate crochet work to beautiful pottery and embroidery.
+As an artist myself, I always dreamed of building a space where handmade art could shine, be appreciated, and even purchased directly from the creators. KarigariKart is that dream, a platform where art meets technology, and talent finds a voice.</p>
+
+<h2 class = "fade" style="font-family:'lucida handwriting'; font-size:25px; color:#d63384;">🧵 Our Mission and Vision</h2>
+<p style="font-size:18px; line-height:1.8; color:#444; text-align: justify; margin-left:650px; margin-right:650px">
+At KarigariKart, our mission is simple yet powerful,to preserve India’s cultural heritage while empowering local artisans. <br>
+We envision a world where traditional crafts find their rightful place in modern homes, and where every artisan’s work is valued, celebrated, and cherished.
+</p><br>
+
+<h2 class = "fade" style="font-family:'lucida handwriting'; font-size:25px; color:#d63384;">🧵 The story behind KaarigariKart</h2>
+<p style="font-size:18px; line-height:1.8; color:#444; text-align: justify; margin-left:650px; margin-right:650px">
+The journey of KarigariKart began with a love for handmade creations. Growing up surrounded by crafts, I realized how much skill, patience, and heart goes into each piece. Sadly, many of these treasures remain unseen or undervalued in today’s fast-paced world.
+That’s when the idea of KarigariKart was born, to create a digital platform where tradition meets technology, giving every artisan the chance to showcase their craft to the world..
+</p><br>
+
+<h2 class = "fade" style="font-family:'lucida handwriting'; font-size:25px; color:#d63384;">🧵 Why HandMade Matters</h2>
+<p style="font-size:18px; line-height:1.8; color:#444; text-align: justify; margin-left:650px; margin-right:650px">
+Handmade art is more than just a product, it’s a legacy.
+Each painting, crochet design, or clay pot carries the warmth of human touch, the richness of tradition, and the uniqueness of imperfection. Unlike machine-made goods, every handmade item has a story stitched, carved, or painted with love.<br>
+By choosing handmade, you are not just buying art, you are preserving culture, supporting sustainability, and celebrating creativity.</p><br>
+
+<a href="artisans.html" style="text-decoration:none; color:inherit;"">
+<h2 class = "fade" style="font-family:'lucida handwriting'; font-size:25px; color:#d63384; cursor:pointer;">🧵 Meet the artisans</h2>
+<p style="font-size:18px; line-height:1.8; color:#444; text-align: justify; margin-left:650px; margin-right:650px">
+Behind every creation on KarigariKart is a talented artisan with a story to tell. From women keeping crochet traditions alive in small towns to families carrying forward centuries-old pottery techniques, every piece represents generations of knowledge and passion.
+We aim to regularly feature these artisans and share their journeys with you, so you know the hands and hearts behind the art you cherish.</p><br>
+
+<h2 class = "fade" style="font-family:'lucida handwriting'; font-size:25px; color:#d63384;">🧵 Our commitments</h2>
+<p style="font-size:18px; line-height:1.8; color:#444; text-align: center; margin-left:650px; margin-right:650px"> We are commited to: </p>
+<ul style="font-size:18px; line-height:1.8; text-align: center; list-style-type: none"> 
+<li> ✔️ Supporting artisans with fair opportunities. </li>
+<li> ✔️ Showcasing authentic, handmade products.</li>
+<li> ✔️ Preserving India’s cultural and artistic heritage.</li>
+<li> ✔️ Promoting eco-friendly and sustainable crafts.</li>
+<br>
+
+<p style="font-size:20px; line-height:1.8; color:#444; text-align: center; margin-left:650px; margin-right:650px">
+Every product on KarigariKart is more than an object, it’s a story stitched, carved, or painted by loving hands. When you shop here, you are not just buying art; you are supporting real families, keeping traditions alive, and inspiring the next generation of creators.</p>
+
+<h3 style="color:#8b008b; margin-top:40px; text-align: right">With love,</h3>
+<p style="font-style:italic; font-size:22px; color:#d63384; text-align: right">Yashoda<br>Founder, KarigariKart</p>
+</div>
+
+<footer>
+<p>Made by Yashoda © 2025 | Contact: <a href="mailto:yashoda786@gmail.com" style="color:#5a005a;">yashoda786@gmail.com</a></p>
+</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+  var fades = document.querySelectorAll(".fade");
+  for (var i = 0; i < fades.length; i++) {
+    var element = fades[i];
+    var position = element.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+
+    if (position < screenHeight - 100) { 
+      element.classList.add("visible");
+    }
+  }
+});
+</script>
+
+
+</body>
+</html>

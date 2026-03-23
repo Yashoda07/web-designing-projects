@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Feedback - KaarigariKart</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallery.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<script>
+  function checkForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var feedback = document.getElementById("feedback").value;
+
+    if (name === "" || email === "" || feedback === "") {
+      alert("Please fill all the fields before submitting!");
+      
+    } else {
+      alert("Thanks for your feedback, " + name);
+     
+    }
+  }
+</script>
+
+
+<header>
+<div>
+<h1>KaarigariKart</h1>
+<p class="tagline">We’d love to hear your thoughts!</p>
+</div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="support.html">Support</a></li>
+</ul>
+</nav>
+
+
+<div style="text-align:center; margin-top:40px;">
+
+<h2 style="font-family:'lucida handwriting', cursive; color:#d63384; font-size:30px;">💌 Leave Us a Feedback</h2>
+
+<form style="display:inline-block; text-align:left; padding:25px; background-color:#ffe6f0; border-radius:10px;
+ border:2px solid #e6e6fa; box-shadow:0 4px 8px rgba(0,0,0,0.1); margin-top:20px;">
+
+<label for="name" style="font-weight:bold;"> Your Name: </label><br>
+<input type="text" id="name" name="name" style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px;"><br>
+
+<label for="email" style="font-weight:bold;">Email Address:</label><br>
+<input type="email" id="email" name="email" style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px;"><br>
+
+Feedback or Message ?
+<select> 
+<option> 
+<label for="feedback" style="font-weight:bold;">Feedback</label><br>
+<textarea id="feedback" name="feedback" rows="5" cols="40" required style="width:100%; 
+padding:8px; margin-bottom:15px; border-radius:5px;"></textarea><br>
+</option>
+<option> 
+<label for="feedback" style="font-weight:bold;">Message</label><br>
+<textarea id="feedback" name="feedback" rows="5" cols="40" required style="width:100%; 
+padding:8px; margin-bottom:15px; border-radius:5px;"></textarea><br></option>
+
+<label for="feedback/message" style="font-weight:bold;"> Your Message: </label><br>
+<input type="text" id="feedback/message" name="feedback/message" required style="width:100%; padding:8px; margin-bottom:35px; border-radius:25px;"><br>
+
+<input type="submit" value="Submit Feedback" style="background-color:#ff69b4; color:white; 
+font-weight:bold; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+</form>
+</div>
+
+  <!-- User Reviews Section -->
+<div style="margin:60px auto; text-align:center; max-width:1100px;">
+  <h2 style="font-family:'lucida handwriting', cursive; color:#741b7c; font-size:30px; margin-bottom:30px;">
+    🌸 What Our Users Say About KaarigariKart 🌸
+  </h2>
+
+<!-- Container for all feedback cards -->
+<div class="feedback" style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
+
+  <!-- Card 1 -->
+  <div class="gallery-row" style="width:300px; padding:20px; background:#ffe6f0; border-radius:15px; 
+              box-shadow:2px 2px 6px #ccc; text-align:center; display:flex; flex-direction:column; align-items:center;">
+    <img src="ananya.jpg" alt="User 1" style="width:150px; height:150px; border-radius:50%; margin-bottom:15px;">
+    <p style="font-weight:bold; color:#741b7c; font-size:18px;">Ananya Sharma</p>
+    <p style="font-style:italic; color:#444; text-align:justify; font-family:'Times New Roman', serif;">
+      "KarigariKart has opened my eyes to the incredible talent of Indian artisans. 
+      I was truly amazed at how beautifully the crafts were presented online. 
+      The gallery is colorful, easy to explore, and feels like walking through 
+      an actual art exhibition!"
+    </p>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="gallery-row" style="width:300px; padding:20px; background:#ffe6f0; border-radius:15px; 
+              box-shadow:2px 2px 6px #ccc; text-align:center; display:flex; flex-direction:column; align-items:center;">
+    <img src="rahul.jpg" alt="User 2" style="width:150px; height:150px; border-radius:50%; margin-bottom:15px;">
+    <p style="font-weight:bold; color:#741b7c; font-size:18px;">Rahul Mehta</p>
+    <p style="font-style:italic; color:#444; text-align:justify; font-family:'Times New Roman', serif;">
+      "This initiative is not just a website, it is a movement to support local 
+      artisans. I purchased a handwoven scarf and the quality was outstanding. 
+      Knowing that my purchase directly helps the craftsmen makes me feel proud 
+      to be part of this cause."
+    </p>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="gallery-row" style="width:300px; padding:20px; background:#ffe6f0; border-radius:15px; 
+              box-shadow:2px 2px 6px #ccc; text-align:center; display:flex; flex-direction:column; align-items:center;">
+    <img src="priya.jpg" alt="User 3" style="width:150px; height:150px; border-radius:50%; margin-bottom:15px;">
+    <p style="font-weight:bold; color:#741b7c; font-size:18px;">Priya Kapoor</p>
+    <p style="font-style:italic; color:#444; text-align:justify; font-family:'Times New Roman', serif;">
+      "I’ve always wanted a place where Indian handicrafts could shine, and 
+      KarigariKart has done just that. From pottery to embroidery, every product 
+      feels authentic and special. This website is more than shopping, it’s a 
+      cultural journey through India’s art and traditions."
+    </p>
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+  $(".feedback").click(function(){
+    $(".gallery-row").fadeToggle(600);
+  });
+});
+</script>
+
+<footer>
+<p>Made by Yashoda © 2025 | Contact: <a href="mailto:yashoda786@gmail.com" style="color:#5a005a;">yashoda786@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

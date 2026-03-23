@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - KarigariKart</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+<div>
+<h1><b>KarigariKart</h1>
+<p class="tagline">Login to explore and share Art!</p>
+</div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="register.html">Register</a></li>
+</ul>
+</nav>
+
+<div style="text-align:center; margin-top:40px;">
+<h2 style="font-family:'lucida handwriting', cursive; color:#d63384; font-size:30px;">User Login</h2>
+
+<form id="loginForm" style="display:inline-block; text-align:left; padding:25px; background-color:#ffe6f0; 
+border-radius:10px; border:2px solid #e6e6fa; box-shadow:0 4px 8px rgba(0,0,0,0.1); margin-top:20px;">
+
+<label for="email" style="font-weight:bold;">Email:</label><br>
+<input type="email" id="email" name="email" required placeholder = "enter your email here" style="width:100%; padding:8px; 
+margin-bottom:15px; border-radius:5px;"><br>
+
+<label for="password" style="font-weight:bold;">Password:</label><br>
+<input type="password" id="password" name="password" required placeholder = "enter password" style="width:100%; padding:8px; 
+margin-bottom:15px; border-radius:5px;"><br>
+
+<input type="submit" value="Login" style="background-color:#ff69b4; color:white; font-weight:bold; 
+padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+</form>
+</div>
+
+<script>
+document.getElementById("loginForm").onsubmit = function(event) {
+  event.preventDefault(); // stops normal form submit
+  
+  var email = document.getElementById("email").value;
+  var pass = document.getElementById("password").value;
+
+  if (email === "" || pass === "") {
+    alert("Please fill in both Email and Password!");
+    return false;
+  } else {
+    // Take username before @
+    var username = email.split("@")[0];
+    alert("Welcome back, " + username + "!");
+    
+    // Redirect to home page
+    window.location.href = "index.html";
+  }
+};
+</script>
+
+<footer>
+<p>Made by Yashoda © 2025 | Contact: 
+<a href="mailto:yashoda786@gmail.com" style="color:#5a005a;">yashoda786@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

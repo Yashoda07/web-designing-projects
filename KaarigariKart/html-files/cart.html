@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wishlist - KarigariKart</title>
+<link rel="stylesheet" href="style.css">
+<style>
+h2 {
+  color:#a52a6b; font-size:28px; border-bottom:2px solid #a52a6b;
+  display:inline-block; padding-bottom:5px; margin-bottom:20px;
+}
+ul { list-style:none; padding:0; max-width:500px; margin:0 auto; }
+li {
+  background:#ffe6f0; margin:10px 0; padding:15px; border-radius:15px;
+  box-shadow:2px 2px 6px #ccc; font-size:18px; color:#741b7c;
+  display:none; /* start hidden for fadeIn effect */
+}
+.empty {
+  font:italic 20px "lucida handwriting"; color:#555; margin-top:50px;
+}
+button {
+  margin-top:30px; padding:10px 20px; background:#ffccdd; color:#741b7c;
+  border:2px solid #741b7c; border-radius:10px; font-size:16px; cursor:pointer;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body style="text-align:center">
+
+<h2>Your Wishlist:</h2>
+<ul id="wishlist"></ul>
+<p id="emptyMsg" class="empty" style="display:none;">Your wishlist is empty.</p>
+<button id="clearBtn" style="display:none;">Clear Wishlist</button>
+
+<script>
+$(document).ready(function(){
+  let list = (localStorage.getItem("cart") || "").split(",").filter(Boolean);
+
+  if(list.length){
+    // Show wishlist items with fade effect
+    list.forEach(item => {
+      $("#wishlist").append("<li>"+item+"</li>");
+    });
+    $("#wishlist li").each(function(i){
+      $(this).delay(300*i).fadeIn(500);
+    });
+    $("#clearBtn").show();
+  } else {
+    $("#emptyMsg").fadeIn();
+  }
+
+  // Clear wishlist with animation
+  $("#clearBtn").click(function(){
+    $("#wishlist li").fadeOut(500, function(){
+      $("#wishlist").empty();
+      localStorage.removeItem("cart");
+      $("#clearBtn").fadeOut();
+      $("#emptyMsg").delay(500).fadeIn();
+    });
+  });
+});
+</script>
+
+</body>
+</html>

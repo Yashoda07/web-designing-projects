@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration - KarigariKart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <div>
+    <h1>KarigariKart</h1>
+    <p class="tagline">Register and Be Part of Our Community!</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+</nav>
+
+<section class="form-section">
+  <h2 style = "font-family: lucida handwriting">Registration</h2>
+
+  <!-- Role Selection -->
+  <label><b>Are you an Artisan or a Buyer?</b></label><br>
+  <select id="role" onchange="showForm()">
+    <option value="">-- Select --</option>
+    <option value="artisan">Artisan</option>
+    <option value="buyer">Buyer</option>
+  </select>
+  <br><br>
+
+  <!-- Artisan Form -->
+  <form id="artisanForm" style="display:none;">
+    <h3>🎨 Artisan Registration</h3>
+    <label for="email">Email:</label><br>
+    <input type="email" id="a_email" required placeholder = "enter your email here"><br><br>
+
+    <label for="name">Password:</label><br>
+    <input type="text" id="a_name" required placeholder = "enter your password here"><br><br>
+
+
+    <label for="region">Region:</label><br>
+    <input type="text" id="a_region" required placeholder = "enter your region here"><br><br>
+
+    <label for="category">Art Category:</label><br>
+    <select id="a_category">
+      <option>Painting</option>
+      <option>Crochet</option>
+      <option>Pottery</option>
+      <option>Embroidery</option>
+      <option>Knitting</option>
+      <option>Other</option>
+    </select><br><br>
+
+    <label for="description">Describe Your Art:</label><br>
+    <textarea id="a_description" rows="4" cols="40"></textarea><br><br>
+
+    <label for="art">Upload your Artwork here</label><br>
+    <input type="file" id="art" required><br><br>
+
+    <input type="submit" value="Submit Your Craft">
+  </form>
+
+  <!-- Buyer Form -->
+  <form id="buyerForm" style="display:none;">
+    <h3>🛒 Buyer Registration</h3>
+    <label for="b_email">Email:</label><br>
+    <input type="email" id="b_email" required placeholder = "enter your email here"><br><br>
+    
+    <label for="b_name">Password</label><br>
+    <input type="text" id="b_name" required placeholder = "enter your Password here"><br><br>
+    
+    <label for="b_interest">What type of products are you interested in?</label><br>
+    <select id="b_interest">
+      <option>Painting</option>
+      <option>Crochet</option>
+      <option>Pottery</option>
+      <option>Embroidery</option>
+      <option>Knitting</option>
+      <option>All</option>
+    </select><br><br>
+
+    <label for="b_address">Shipping Address:</label><br>
+    <textarea id="b_address" rows="4" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Sign Up as Buyer">
+  </form>
+
+  <p id="message" style="color: green; font-weight: bold; margin-top: 15px;"></p>
+</section>
+
+<footer>
+  <p>Made by Yashoda © 2025 | Contact: 
+  <a href="mailto:yashoda786@gmail.com">yashoda786@gmail.com</a></p>
+</footer>
+
+<script>
+function showForm() {
+  let role = document.getElementById("role").value;
+  document.getElementById("artisanForm").style.display = (role === "artisan") ? "block" : "none";
+  document.getElementById("buyerForm").style.display = (role === "buyer") ? "block" : "none";
+  document.getElementById("message").textContent = "";
+}
+
+// Handle Artisan Form
+document.getElementById("artisanForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let name = document.getElementById("a_name").value.trim();
+  let region = document.getElementById("a_region").value.trim();
+  let price = document.getElementById("a_price").value.trim();
+  let email = document.getElementById("a_email").value.trim();
+  let message = document.getElementById("message");
+
+  if (!name || !region || !price || !email) {
+    message.style.color = "red";
+    message.textContent = "Please fill in all required fields.";
+    return;
+  }
+
+  if (isNaN(price)) {
+    message.style.color = "red";
+    message.textContent = "Please enter a valid number for price.";
+    return;
+  }
+
+  message.style.color = "green";
+  message.textContent = "✅ Artisan registration successful!";
+  document.getElementById("artisanForm").reset();
+});
+
+// Handle Buyer Form
+document.getElementById("buyerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let name = document.getElementById("b_name").value.trim();
+  let email = document.getElementById("b_email").value.trim();
+  let message = document.getElementById("message");
+
+  if (!name || !email) {
+    message.style.color = "red";
+    message.textContent = "Please fill in all required fields.";
+    return;
+  }
+
+  message.style.color = "green";
+  message.textContent = "✅ Buyer registration successful!";
+  document.getElementById("buyerForm").reset();
+});
+</script>
+
+</body>
+</html>
