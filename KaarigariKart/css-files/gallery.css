@@ -1,0 +1,45 @@
+.gallery-section {
+  padding: 30px;
+  background-color: #fff0f5;
+}
+
+.gallery-section h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #d63384;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #ffe6f0;
+  border: 2px solid #e6e6fa;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+  color: #8a2be2;
+  font-size: 20px;
+}
+
+
+

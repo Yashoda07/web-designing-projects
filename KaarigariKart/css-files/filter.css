@@ -1,0 +1,26 @@
+.filter-list li a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color:#8b008b;
+}
+
+.filter-list li a:hover {
+  color: #ff1493;
+  font-size: 24px;
+  text-shadow: 2px 2px 8px pink;
+}
+
+.filter-list li {
+  background: #fff0fa;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 15px;
+  width: 50%;
+  box-shadow: 2px 2px 6px #ddd;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.filter-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 12px #aaa;
+}
