@@ -1,6 +1,6 @@
-# KarigariKart
+# KaarigariKart
 
-KarigariKart is a basic e-commerce style website designed to promote, showcase and purchase handcrafted and artisanal products.  
+KaarigariKart is a basic e-commerce style website designed to promote, showcase and purchase handcrafted and artisanal products.  
 The project focuses on applying foundational web development concepts using HTML, CSS and JavaScript.
 
 ---
