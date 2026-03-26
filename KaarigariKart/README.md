@@ -23,6 +23,12 @@ The project focuses on applying foundational web development concepts using HTML
 
 ---
 
+## Live Demo link of KaarigariKart
+
+https://yashoda07.github.io/frontend-projects/KaarigariKart/html-files/
+
+---
+
 ## Learning Objectives
 
 This project was created to:
