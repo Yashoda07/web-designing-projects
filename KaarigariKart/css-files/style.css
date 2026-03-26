@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-image: url('bg.jpg');
+  background-image: url('../images/bg.jpg');
   background-repeat: repeat;
   background-color: rgba(255,220,230,0.5);
   background-blend-mode: overlay;
@@ -13,7 +13,7 @@ header {
   position: relative;
   padding: 20px;
   background-color: #fff0f5;
-  background-image: url('pea.jpg');
+  background-image: url('../images/pea.jpg');
   background-repeat: repeat;
   background-size: contain;
   background-position: center;
@@ -51,7 +51,7 @@ h1,h2 {
 }
 
 nav {
-  background-image: url('border.jpg');
+  background-image: url('../images/border.jpg');
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
